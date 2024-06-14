@@ -13,9 +13,12 @@
         foreach($rows as $row):
         
     ?>
-    <option onclick="showPage('prescription_order.php?customer=<?php echo $row->customer_id?>')">
+    <div class="results">
+        <a href="javascript:void(0)" onclick="showPage('prescription_order.php?customer=<?php echo $row->customer_id?>')"><?php echo $row->last_name." ".$row->other_names?></a>
+    </div>
+    <!-- <option onclick="showPage('prescription_order.php?customer=<?php echo $row->customer_id?>')">
         <?php echo $row->last_name." ".$row->other_names?>
-    </option>
+    </option> -->
 <?php
     // }
     endforeach;

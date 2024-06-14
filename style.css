@@ -1778,7 +1778,6 @@ table tr:nth-child(even){
 }
 .add_user_form .inputs .data input, .add_user_form .inputs .data select, .add_user_form .inputs .data textarea, .add_user_form .inputs .data select option{
     padding:10px;
-    width:100%;
     border: 1px solid rgba(56, 55, 55, 0.3);
     border-radius: 5px;
     width:100%!important;
@@ -2894,7 +2893,7 @@ x
     /* position:absolute; */
     /* width:auto; */
 }
-#sales_item option, #search_results option, #transfer_item option{
+#sales_item option, #search_results option, #transfer_item option, #search_results .results, #sales_item .results, #transfer_item .results{
     background:var(--otherColor);
     color:#fff;
     padding:10px 5px;
@@ -2907,11 +2906,15 @@ x
     width:100%;
     
 }
+#search_results a, #sales_item a, #transfer_item a{
+    color:#fff;
+    display:block;
+}
 #transfer_item{
     position:relative;
     width:100%;
 }
-#sales_item option:hover, #search_results option:hover{
+#sales_item option:hover, #search_results option:hover, #sales_item .results:hover,  #search_results .results:hover{
     background:var(--moreColor);
 
 }
@@ -3670,7 +3673,7 @@ x
         width:100%!important;
     }
     .displays .add_user_form .data{
-        width:90%!important;
+        width:100%!important;
         margin:0!important;
     }
     .displays .add_user_form .data label{
@@ -3775,7 +3778,9 @@ x
     #add_rights .add_user_form .data input{
         margin-top:0!important;
     }
-
+    .add_user_form .inputs .data input{
+        margin:auto!important;
+    }
     .priceForm{
         width:100%!important;
     }

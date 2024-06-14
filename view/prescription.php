@@ -24,7 +24,7 @@
                     <!-- bar items form -->
                     <div class="data" style="width:90%; position:relative">
                     <label for="customer">Select customer</label>
-                        <input type="text" name="customer" id="customer" oninput="getCustomers(this.value)" placeholder="Enter customer name or phone number">
+                        <input type="search" name="customer" id="customer" oninput="getCustomers(this.value)" placeholder="Enter customer name or phone number">
                         <div class="search_results" id="search_results">
 
                         </div>

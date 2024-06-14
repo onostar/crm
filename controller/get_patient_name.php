@@ -16,7 +16,10 @@
         foreach ($rows as $row) {
             
 ?>
-    <option onclick="addPatient(<?php echo $row->customer_id?>, '<?php echo $row->last_name.' '.$row->other_names?>')"><?php echo $row->last_name.' '.$row->other_names?></option>
+    <div class="results">
+        <a href="javascript:void(0)" onclick="addPatient(<?php echo $row->customer_id?>, '<?php echo $row->last_name.' '.$row->other_names?>')"><?php echo $row->last_name." ".$row->other_names?></a>
+    </div>
+    <!-- <option onclick="addPatient(<?php echo $row->customer_id?>, '<?php echo $row->last_name.' '.$row->other_names?>')"><?php echo $row->last_name.' '.$row->other_names?></option> -->
 <?php
         }   
     }else{
