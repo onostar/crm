@@ -21,12 +21,13 @@
             <div class="inputs">
                 <div class="data">
                     <label for="patient">Select Patient</label>
-                    <input type="text" name="patient" id="patient" required placeholder="Input patient name" onkeyup="getPatientName(this.value)">
+                    <input type="search" name="patient" id="patient" required placeholder="Input patient name" onkeyup="getPatientName(this.value)">
                     <input type="hidden" name="customer" id="customer">
                         <div id="transfer_item">
                             
                         </div>
                 </div>
+                
                 <div class="data">
                     <label for="title">Subject</label>
                     <?php 

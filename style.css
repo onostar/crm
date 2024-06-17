@@ -2896,7 +2896,6 @@ x
 #sales_item option, #search_results option, #transfer_item option, #search_results .results, #sales_item .results, #transfer_item .results{
     background:var(--otherColor);
     color:#fff;
-    padding:10px 5px;
     /* margin:2px 0; */
     border-bottom: 1px solid #fff;
     width:100%;
@@ -2909,12 +2908,14 @@ x
 #search_results a, #sales_item a, #transfer_item a{
     color:#fff;
     display:block;
+    padding:10px 5px;
+
 }
 #transfer_item{
     position:relative;
     width:100%;
 }
-#sales_item option:hover, #search_results option:hover, #sales_item .results:hover,  #search_results .results:hover{
+#sales_item option:hover, #search_results option:hover, #sales_item .results:hover,  #search_results .results:hover, #transfer_item .results:hover{
     background:var(--moreColor);
 
 }

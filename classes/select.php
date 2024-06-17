@@ -184,6 +184,18 @@
                 return "0";
             }
         }
+        //fetch details count with 2 condition and current date
+        public function fetch_count_2con2Date($table, $column1, $value1, $column2, $from, $to){
+            $get_user = $this->connectdb()->prepare("SELECT * FROM $table WHERE $column1 = :$column1 AND $column2 BETWEEN '$from' AND '$to'");
+            $get_user->bindValue("$column1", $value1);
+            // $get_user->bindValue("$column2", $condition2);
+            $get_user->execute();
+            if($get_user->rowCount() > 0){
+                return $get_user->rowCount();
+            }else{
+                return "0";
+            }
+        }
         //fetch details count with 2 condition and current date and grouped by
         public function fetch_count_2condDateGro($table, $column1, $condition1, $column2, $condition2, $date, $group){
             $get_user = $this->connectdb()->prepare("SELECT * FROM $table WHERE $column1 = :$column1 AND $column2 = :$column2 AND date($date) = CURDATE() GROUP BY $group");
